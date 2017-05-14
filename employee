@@ -1,0 +1,58 @@
+package baiTapTrongTapTaiLieuCuaDHCN_DHQGHN;
+
+class Employee {
+	private String firstName;
+	private String lastName;
+	private double salary;
+
+	void display() {
+		System.out.println("First name: " + firstName);
+		System.out.println("Last name: " + lastName);
+		System.out.println("Salary: " + salary);
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		if (salary < 0.0) {
+			this.salary = 0.0;
+		} else
+			this.salary = (salary * 12) + (salary * 0.1);
+	}
+
+}
+
+public class Page83_Employee {
+	public static void main(String[] args) {
+		Employee e1 = new Employee();
+		e1.setFirstName("Ti ");
+		e1.setLastName(" Van ");
+		e1.setSalary(-10);
+		
+		Employee e2 = new Employee();
+		e2.setFirstName("Teo ");
+		e2.setLastName(" Van ");
+		e2.setSalary(2000);
+		
+		e1.display();
+		e2.display();
+	}
+}
